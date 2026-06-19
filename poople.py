@@ -122,8 +122,8 @@ def main() -> None:
 
     args = parser.parse_args()
     word_list_filename = args.word_list_filename
-    start_word = args.start_word
-    end_word = args.end_word
+    start_word = args.start_word.strip().upper()
+    end_word = args.end_word.strip().upper()
 
     word_list, error_list, word_length = load_word_list(word_list_filename)
 
