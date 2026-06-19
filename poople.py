@@ -104,7 +104,7 @@ def shortest_path(graph: dict[str, list[str]],
                                     if next_node not in visited])
         check_paths = new_check_paths
 
-    return ['NO SOLUTION']
+    return []
 
 
 def main() -> None:
@@ -153,8 +153,12 @@ def main() -> None:
     print('The solution is...')
 
     solution = shortest_path(graph, start_word, end_word)
-
-    print(' -> '.join(solution))
+    
+    if solution:
+        print(' -> '.join(solution))
+    else:
+        print(f'...there is no solution! '
+              f'No path was found between {start_word} and {end_word}.')
 
 
 if __name__ == '__main__':
