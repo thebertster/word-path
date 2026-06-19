@@ -1,0 +1,1 @@
+Little script to solve the poople.io type word puzzle where you need to find a path of words from a start word to an end word where each word in the path differs from the previous one by only a single letter.
